@@ -1,0 +1,11 @@
+C:\Users\William\Documents\GitHub\ProjectKingdom\ProjectKingdoM\ProjectKingdoM\bin\Debug\netcoreapp3.1\ProjectKingdoM.exe
+C:\Users\William\Documents\GitHub\ProjectKingdom\ProjectKingdoM\ProjectKingdoM\bin\Debug\netcoreapp3.1\ProjectKingdoM.deps.json
+C:\Users\William\Documents\GitHub\ProjectKingdom\ProjectKingdoM\ProjectKingdoM\bin\Debug\netcoreapp3.1\ProjectKingdoM.runtimeconfig.json
+C:\Users\William\Documents\GitHub\ProjectKingdom\ProjectKingdoM\ProjectKingdoM\bin\Debug\netcoreapp3.1\ProjectKingdoM.runtimeconfig.dev.json
+C:\Users\William\Documents\GitHub\ProjectKingdom\ProjectKingdoM\ProjectKingdoM\bin\Debug\netcoreapp3.1\ProjectKingdoM.dll
+C:\Users\William\Documents\GitHub\ProjectKingdom\ProjectKingdoM\ProjectKingdoM\bin\Debug\netcoreapp3.1\ProjectKingdoM.pdb
+C:\Users\William\Documents\GitHub\ProjectKingdom\ProjectKingdoM\ProjectKingdoM\obj\Debug\netcoreapp3.1\ProjectKingdoM.csprojAssemblyReference.cache
+C:\Users\William\Documents\GitHub\ProjectKingdom\ProjectKingdoM\ProjectKingdoM\obj\Debug\netcoreapp3.1\ProjectKingdoM.AssemblyInfoInputs.cache
+C:\Users\William\Documents\GitHub\ProjectKingdom\ProjectKingdoM\ProjectKingdoM\obj\Debug\netcoreapp3.1\ProjectKingdoM.AssemblyInfo.cs
+C:\Users\William\Documents\GitHub\ProjectKingdom\ProjectKingdoM\ProjectKingdoM\obj\Debug\netcoreapp3.1\ProjectKingdoM.dll
+C:\Users\William\Documents\GitHub\ProjectKingdom\ProjectKingdoM\ProjectKingdoM\obj\Debug\netcoreapp3.1\ProjectKingdoM.pdb
