@@ -6,16 +6,27 @@ namespace ProjectKingdoM
 {
     class Kingdom
     {
+        //Four parametrs that will determin the state in the kingdom, values will change depending on actions taken by the player
         protected int church;
-        protected int peasants;
+        protected int population;
         protected int treasure;
         protected int army;
 
-        protected int year; // "high score" håller reda på hur långe kungen sitter
+        protected int year; // Keeps track of how many years passes, could be seen as a "high score after the game ends". 
         protected string kingName;
 
-        public List<Tuple<string, string, int, int, int, int>> Events = new List<Tuple<string, string, int, int, int, int>>(); // Contains which type of events that can be created look at C# tuple types 
+        public List<Tuple<string, string, int, int, int, int>> Events = new List<Tuple<string, string, int, int, int, int>>(); // Contains information about possible events 
         
-
+        public Kingdom() // Constructor, sets starting value of kingdom parameters
+        {
+            church = 100;
+            population = 100;
+            treasure = 100;
+            army = 100;
+        }
+        public void PresentParameters()
+        {
+            Console.WriteLine("###############\nChurch: " + church + "\nPopulation: " + population + "\nTreasure: " + treasure + "\nArmy: " + army + "\n###############");
+        }
     }
 }

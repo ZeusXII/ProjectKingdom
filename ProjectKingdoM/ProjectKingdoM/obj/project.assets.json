@@ -8,19 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\William\\.nuget\\packages\\": {}
+    "C:\\Users\\william.rahn\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\William\\Documents\\GitHub\\ProjectKingdom\\ProjectKingdoM\\ProjectKingdoM\\ProjectKingdoM.csproj",
+      "projectUniqueName": "C:\\Users\\william.rahn\\Documents\\ProjectKingdom\\ProjectKingdoM\\ProjectKingdoM\\ProjectKingdoM.csproj",
       "projectName": "ProjectKingdoM",
-      "projectPath": "C:\\Users\\William\\Documents\\GitHub\\ProjectKingdom\\ProjectKingdoM\\ProjectKingdoM\\ProjectKingdoM.csproj",
-      "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\William\\Documents\\GitHub\\ProjectKingdom\\ProjectKingdoM\\ProjectKingdoM\\obj\\",
+      "projectPath": "C:\\Users\\william.rahn\\Documents\\ProjectKingdom\\ProjectKingdoM\\ProjectKingdoM\\ProjectKingdoM.csproj",
+      "packagesPath": "C:\\Users\\william.rahn\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\william.rahn\\Documents\\ProjectKingdom\\ProjectKingdoM\\ProjectKingdoM\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\william.rahn\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
