@@ -7,10 +7,10 @@ namespace ProjectKingdoM
     class Kingdom
     {
         //Four parametrs that will determin the state in the kingdom, values will change depending on actions taken by the player
-        protected int church;
-        protected int population;
-        protected int treasure;
-        protected int army;
+        public int church;
+        public int population;
+        public int treasure;
+        public int army;
 
         protected int year; // Keeps track of how many years passes, could be seen as a "high score after the game ends". 
         protected string kingName;
