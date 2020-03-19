@@ -9,28 +9,43 @@ namespace ProjectKingdoM
     {
         static void Main(string[] args)
         {
+            EventData e = new EventData();
+            List<Tuple<string, string, int, int, int, int>> incomingEventData = e.ReturnEvents(); //Imports data from EventData
+            BaseEmpire B = new BaseEmpire(); //Base class        
+            Console.WriteLine("Choose empire type\n1. Kingdom \n2. Republic");
+            int userInput = int.Parse(Console.ReadLine());
+            int menu = userInput;
+            switch (menu)
+            {
+                case 1:
+                    
+                    B = new Kingdom();
+                    break;
+                case 2:
 
-            Kingdom A = new Kingdom(); //Creates a new kingdom session
+                    B = new Republic();
+                    break;
+                default:
+                    Console.WriteLine("Ooga booga");
+                    break;
+            }
 
-            List<Tuple<string, string, int, int, int, int>> ListOfTupleEvents = new List<Tuple<string, string, int, int, int, int>>();
-            A.PresentParameters();
-
-            var buildChurch = new Tuple<string, string, int, int, int, int>("Headline", "Info", 10, 4, 6, -6);
-            var buildWarehouse = new Tuple<string, string, int, int, int, int>("Headline", "Info", 10, 4, 96, -6);
-            ListOfTupleEvents.Add(buildChurch);
-            ListOfTupleEvents.Add(buildWarehouse);
-
-            A = new Event(ListOfTupleEvents[0], A).Act();
-            A.PresentParameters();
-
-
-            //Exemple of a tuple
-            var ExamplebuildChurch = new Tuple<string, string, int, int, int, int>("Headline", "Info", 10, 4, 6, -6);
-            //A = new Event(buildChurch, A).Act();
-
-
+            while (true)
+            {
+                Console.WriteLine("HejHej" + RandomEventType(incomingEventData));
+                B.PresentParameters();
+                Console.ReadKey();
+            }
 
             Console.ReadKey();
+        }
+
+        static Random generator = new Random();
+
+        static Tuple<string, string, int, int, int, int> RandomEventType(List<Tuple<string, string, int, int, int, int>> incomingList)
+        {
+            int eventTypeIndex = generator.Next(0, incomingList.Count);
+            return incomingList[eventTypeIndex]; 
         }
 
     }

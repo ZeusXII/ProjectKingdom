@@ -8,7 +8,7 @@ namespace ProjectKingdoM
     {
         protected string eventName;
         protected string eventInfo;
-        private Kingdom newKingdomState;
+        public BaseEmpire newBaseEmpireState;
 
         //Ints used to track value changes throughout the game
         protected int modifyChurch;
@@ -16,14 +16,14 @@ namespace ProjectKingdoM
         protected int modifyArmy;
         protected int modifyTreasure;
 
-        public Event(Tuple<string, string, int, int, int, int> singleEvent, Kingdom kingdomS)
+        public Event(Tuple<string, string, int, int, int, int> singleEvent, BaseEmpire empirE)
         {
             eventName = singleEvent.Item1;
             eventInfo = singleEvent.Item2;
-            modifyState(singleEvent, kingdomS);
+            modifyState(singleEvent, empirE);
 
         }
-        public void modifyState(Tuple<string, string, int, int, int, int> singleEvent, Kingdom kingdomS)
+        public void modifyState(Tuple<string, string, int, int, int, int> singleEvent, BaseEmpire empirE)
         {
             Console.WriteLine(eventName + "\n" + eventInfo + "\n1. Agera " + "2. Agera inte" );
             int userInput = int.Parse(Console.ReadLine());
@@ -31,22 +31,22 @@ namespace ProjectKingdoM
             switch (menu)
             {
                 case 1:
-                    kingdomS.church += singleEvent.Item3;
-                    kingdomS.army += singleEvent.Item5;
+                    empirE.church += singleEvent.Item3;
+                    empirE.army += singleEvent.Item5;
 
                     break;
                 case 2:
-                    kingdomS.treasure += singleEvent.Item6;
-                    kingdomS.population += singleEvent.Item4;
+                    empirE.treasure += singleEvent.Item6;
+                    empirE.population += singleEvent.Item4;
 
                     break;
                 default:
                     Console.WriteLine("Ooga booga");
                     break;
             }
-            newKingdomState = kingdomS;
+            newBaseEmpireState = empirE;
         }
-        public Kingdom Act()
+        public BaseEmpire Act()
         {
             /*
             int playerChoice;
@@ -57,7 +57,7 @@ namespace ProjectKingdoM
             }
             */
            
-            return newKingdomState;
+            return newBaseEmpireState;
 
         }
 
