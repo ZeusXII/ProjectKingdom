@@ -6,12 +6,14 @@ namespace ProjectKingdoM
 {
     class Event 
     {
+        //Might be uneccesary
         protected string eventName;
         protected string eventInfo;
         public BaseEmpire newBaseEmpireState;
 
-        //Ints used to track value changes throughout the game
-        protected int modifyChurch;
+        //Ints used to track value changes throughout the game         //Might be uneccesary
+
+        protected int modifyChurch; 
         protected int modifyPopulation;
         protected int modifyArmy;
         protected int modifyTreasure;
@@ -24,7 +26,7 @@ namespace ProjectKingdoM
 
         }
         public void modifyState(Tuple<string, string, int, int, int, int> singleEvent, BaseEmpire empirE)
-        {
+        { // Method used for maniplating the state of the empire starting parameters, each choice imapcts the parameters differently
             Console.WriteLine(eventName + "\n" + eventInfo + "\n1. Agera " + "2. Agera inte" );
             int userInput = int.Parse(Console.ReadLine());
             int menu = userInput;
@@ -46,7 +48,7 @@ namespace ProjectKingdoM
             }
             newBaseEmpireState = empirE;
         }
-        public BaseEmpire Act()
+        public BaseEmpire Act() //Methodused to return the new parameters after the player has choosen an action
         {
             /*
             int playerChoice;

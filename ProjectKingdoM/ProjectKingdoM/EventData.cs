@@ -6,31 +6,19 @@ namespace ProjectKingdoM
 {
     class EventData
     {
-        List<Tuple<string, string, int, int, int, int>> ListOfTupleEvents = new List<Tuple<string, string, int, int, int, int>>();
+        List<Tuple<string, string, int, int, int, int>> ListOfTupleEvents = new List<Tuple<string, string, int, int, int, int>>(); //List of events
 
         public EventData()// List containing every type of event including parameters
         {
 
-            ListOfTupleEvents.Add(new Tuple<string, string, int, int, int, int>("kyrka", "Info", 5510, 4, 6, -6));
+            ListOfTupleEvents.Add(new Tuple<string, string, int, int, int, int>("kyrka", "Info", 5510, 4, 6, -6)); //An possible event
             ListOfTupleEvents.Add(new Tuple<string, string, int, int, int, int>("hus", "Info", 100, 4, 96, -10));
 
         }
-        public List<Tuple<string, string, int, int, int, int>> ReturnEvents()
+        public List<Tuple<string, string, int, int, int, int>> ReturnEvents() //Returns the events
         {
             return ListOfTupleEvents;
         }
-
-
-
-
-
-
-
-
-
-
-
-
 
         //Examples
         /*
