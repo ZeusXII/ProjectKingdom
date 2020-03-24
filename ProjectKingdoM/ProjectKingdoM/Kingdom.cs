@@ -13,7 +13,7 @@ namespace ProjectKingdoM
         {
             church = 80;
             population = 40;
-            treasure = 80;
+            treasure = 30;
             army = 60;
         }
        

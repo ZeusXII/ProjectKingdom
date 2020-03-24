@@ -11,13 +11,7 @@ namespace ProjectKingdoM
         protected string eventInfo;
         public BaseEmpire newBaseEmpireState;
 
-        //Ints used to track value changes throughout the game         //Might be uneccesary
-
-        protected int modifyChurch; 
-        protected int modifyPopulation;
-        protected int modifyArmy;
-        protected int modifyTreasure;
-
+        //Constructor for 
         public Event(Tuple<string, string, int, int, int, int> singleEvent, BaseEmpire empirE)
         {
             eventName = singleEvent.Item1;

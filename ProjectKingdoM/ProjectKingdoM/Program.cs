@@ -18,7 +18,7 @@ namespace ProjectKingdoM
             switch (menu) //Let's the user choose either a kingdom start or republic start, only chnge in starting values
             {
                 case 1:
-                    
+                
                     B = new Kingdom();
                     break;
                 case 2:
@@ -32,11 +32,12 @@ namespace ProjectKingdoM
 
             while (true)
             {
-                Console.WriteLine("HejHej" + RandomEventType(incomingEventData));
                 B.PresentParameters();
+                
+                Console.WriteLine(RandomEventType(incomingEventData));
+                
                 Console.ReadKey();
             }
-
             Console.ReadKey();
         }
 

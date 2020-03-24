@@ -13,10 +13,6 @@ namespace ProjectKingdoM
         public int treasure;
         public int army;
 
-        // Keeps track of how many years passes, could be seen as a "high score after the game ends".
-        protected int year;  
-
-
         public List<Tuple<string, string, int, int, int, int>> Events = new List<Tuple<string, string, int, int, int, int>>(); // Contains information about possible events 
 
         public void PresentParameters()

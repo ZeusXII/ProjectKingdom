@@ -11,7 +11,7 @@ namespace ProjectKingdoM
         public EventData()// List containing every type of event including parameters
         {
 
-            ListOfTupleEvents.Add(new Tuple<string, string, int, int, int, int>("kyrka", "Info", 5510, 4, 6, -6)); //An possible event
+            ListOfTupleEvents.Add(new Tuple<string, string, int, int, int, int>("kyrka", "Info", 10, 4, 6, -6)); //An possible event
             ListOfTupleEvents.Add(new Tuple<string, string, int, int, int, int>("hus", "Info", 100, 4, 96, -10));
 
         }
