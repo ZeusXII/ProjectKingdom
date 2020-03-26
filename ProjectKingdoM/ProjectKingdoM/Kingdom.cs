@@ -5,10 +5,7 @@ using System.Text;
 namespace ProjectKingdoM
 {
     class Kingdom : BaseEmpire
-    {
-        protected string kingName; //Name of the player/king
-
-        
+    {      
         public Kingdom() // Constructor, sets starting value of kingdom parameters
         {
             church = 80;

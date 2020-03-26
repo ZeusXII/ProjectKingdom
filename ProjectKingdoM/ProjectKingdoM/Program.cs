@@ -8,9 +8,9 @@ namespace ProjectKingdoM
     class Program
     {
         static void Main(string[] args)
-        {
+        {         
             EventData e = new EventData();
-            List<Tuple<string, string, int, int, int, int>> incomingEventData = e.ReturnEvents(); //Imports data from EventData
+            List<SingleEvent> incomingEventData = e.ReturnEvents(); //Imports data from EventData
             BaseEmpire B = new BaseEmpire(); //Base empire type class        
             Console.WriteLine("Choose empire type\n1. Kingdom \n2. Republic");
             int userInput = int.Parse(Console.ReadLine());
@@ -18,7 +18,7 @@ namespace ProjectKingdoM
             switch (menu) //Let's the user choose either a kingdom start or republic start, only chnge in starting values
             {
                 case 1:
-                
+
                     B = new Kingdom();
                     break;
                 case 2:
@@ -32,10 +32,10 @@ namespace ProjectKingdoM
 
             while (true)
             {
+                SingleEvent testRandom = RandomEventType(e.ReturnEvents()); //One random event
+                B = new Event(testRandom, B).Act();
                 B.PresentParameters();
-                
-                Console.WriteLine(RandomEventType(incomingEventData));
-                
+                Console.WriteLine("Press to continue");
                 Console.ReadKey();
             }
             Console.ReadKey();
@@ -43,10 +43,10 @@ namespace ProjectKingdoM
 
         static Random generator = new Random(); //Random generator used for the method below
 
-        static Tuple<string, string, int, int, int, int> RandomEventType(List<Tuple<string, string, int, int, int, int>> incomingList)
+        static SingleEvent RandomEventType(List<SingleEvent> incomingList)
         { //Generates a random order of possible pre-defined events 
             int eventTypeIndex = generator.Next(0, incomingList.Count);
-            return incomingList[eventTypeIndex]; 
+            return incomingList[eventTypeIndex];
         }
 
     }

@@ -13,7 +13,7 @@ namespace ProjectKingdoM
         public int treasure;
         public int army;
 
-        public List<Tuple<string, string, int, int, int, int>> Events = new List<Tuple<string, string, int, int, int, int>>(); // Contains information about possible events 
+        public List<SingleEvent> Events = new List<SingleEvent>(); // Contains information about possible events 
 
         public void PresentParameters()
         {

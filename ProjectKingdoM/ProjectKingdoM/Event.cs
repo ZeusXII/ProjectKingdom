@@ -12,14 +12,14 @@ namespace ProjectKingdoM
         public BaseEmpire newBaseEmpireState;
 
         //Constructor for 
-        public Event(Tuple<string, string, int, int, int, int> singleEvent, BaseEmpire empirE)
+        public Event(SingleEvent singleEvent, BaseEmpire empirE)
         {
-            eventName = singleEvent.Item1;
-            eventInfo = singleEvent.Item2;
+            eventName = singleEvent.headline;
+            eventInfo = singleEvent.info;
             modifyState(singleEvent, empirE);
 
         }
-        public void modifyState(Tuple<string, string, int, int, int, int> singleEvent, BaseEmpire empirE)
+        public void modifyState(SingleEvent singleEvent, BaseEmpire empirE)
         { // Method used for maniplating the state of the empire starting parameters, each choice imapcts the parameters differently
             Console.WriteLine(eventName + "\n" + eventInfo + "\n1. Agera " + "2. Agera inte" );
             int userInput = int.Parse(Console.ReadLine());
@@ -27,13 +27,13 @@ namespace ProjectKingdoM
             switch (menu)
             {
                 case 1:
-                    empirE.church += singleEvent.Item3;
-                    empirE.army += singleEvent.Item5;
+                    empirE.church += singleEvent.c;
+                    empirE.army += singleEvent.a;
 
                     break;
                 case 2:
-                    empirE.treasure += singleEvent.Item6;
-                    empirE.population += singleEvent.Item4;
+                    empirE.treasure += singleEvent.t;
+                    empirE.population += singleEvent.p;
 
                     break;
                 default:
@@ -44,17 +44,7 @@ namespace ProjectKingdoM
         }
         public BaseEmpire Act() //Methodused to return the new parameters after the player has choosen an action
         {
-            /*
-            int playerChoice;
-            bool success = false;
-            while (!success)
-            {
-                success = int.TryParse(Console.ReadLine(), out playerChoice);
-            }
-            */
-           
             return newBaseEmpireState;
-
         }
 
     }
