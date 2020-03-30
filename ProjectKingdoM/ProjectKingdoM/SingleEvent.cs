@@ -6,6 +6,7 @@ namespace ProjectKingdoM
 {
     class SingleEvent
     {
+        //Class used for cleaning the program code up a bit by calling on it as a constructor instead of "Tuple<string, string, int, int, int, int>"
         public string headline;
         public string info;
         public int c;

@@ -21,7 +21,7 @@ namespace ProjectKingdoM
         }
         public void modifyState(SingleEvent singleEvent, BaseEmpire empirE)
         { // Method used for maniplating the state of the empire starting parameters, each choice imapcts the parameters differently
-            Console.WriteLine(eventName + "\n" + eventInfo + "\n1. Agera " + "2. Agera inte" );
+            Console.Write(eventName + "\n" + eventInfo + "\n\n1. Act " + "2. Dont act" + " \nUser choice: " );
             int userInput = int.Parse(Console.ReadLine());
             int menu = userInput;
             switch (menu)
@@ -43,7 +43,7 @@ namespace ProjectKingdoM
             newBaseEmpireState = empirE;
         }
         public BaseEmpire Act() //Methodused to return the new parameters after the player has choosen an action
-        {
+        {          
             return newBaseEmpireState;
         }
 

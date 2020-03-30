@@ -32,10 +32,17 @@ namespace ProjectKingdoM
 
             while (true)
             {
-                SingleEvent testRandom = RandomEventType(e.ReturnEvents()); //One random event
-                B = new Event(testRandom, B).Act();
+                
+                Console.Clear();
+                Console.WriteLine("Current status");
                 B.PresentParameters();
-                Console.WriteLine("Press to continue");
+                Console.WriteLine("===============Event===============");
+                SingleEvent testRandom = RandomEventType(e.ReturnEvents()); //One random event               
+                B = new Event(testRandom, B).Act();
+                Console.WriteLine("==============================");
+                Console.WriteLine("New status");
+                B.PresentParameters();
+                Console.Write("Press to continue");
                 Console.ReadKey();
             }
             Console.ReadKey();
