@@ -42,7 +42,7 @@ namespace ProjectKingdoM
                 Console.WriteLine("==============================");
                 Console.WriteLine("New status");
                 B.PresentParameters();
-                Console.Write("Press to continue");
+                Console.Write("Press enter to continue");
                 Console.ReadKey();
             }
             Console.ReadKey();
