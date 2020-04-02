@@ -33,7 +33,7 @@ namespace ProjectKingdoM
             }
             catch (FormatException)
             {
-                Console.WriteLine("FEL!");
+                Console.WriteLine("Only keys 1 2 3 and 0 are accepted!");
                 Console.ReadKey();
                 menu = 0;
             }
