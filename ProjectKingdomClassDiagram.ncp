@@ -1,0 +1,137 @@
+<Project>
+  <Name>ProjectKingdomClassDiagram</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>ProjectKingdom</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>BaseEmpire</Name>
+        <Access>Public</Access>
+        <Location left="118" top="20" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public int church</Member>
+        <Member type="Field">public int population</Member>
+        <Member type="Field">public int treasure</Member>
+        <Member type="Field">public int army</Member>
+        <Member type="Field">public List&lt;SingleEvent&gt; Events</Member>
+        <Member type="Method">public void PresentParameters()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Kingdom</Name>
+        <Access>Public</Access>
+        <Location left="27" top="396" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public int church = 80</Member>
+        <Member type="Field">public int populaton = 40</Member>
+        <Member type="Field">public int treasure = 30</Member>
+        <Member type="Field">public int army = 60</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Event</Name>
+        <Access>Public</Access>
+        <Location left="829" top="20" />
+        <Size width="360" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected string eventName</Member>
+        <Member type="Field">protected string eventInfo</Member>
+        <Member type="Field">public bool isRunning</Member>
+        <Member type="Field">public BaseEmpire newBaseEmpireState</Member>
+        <Member type="Method">public BaseEmpire Act()</Member>
+        <Member type="Method">public void ModifyState(SingleEvent singleEvent, BaseEmpire empirE)</Member>
+        <Member type="Constructor">public Event(SingleEvent singleEvent, BaseEmpire empirE)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>EventData</Name>
+        <Access>Public</Access>
+        <Location left="954" top="396" />
+        <Size width="223" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List&lt;SingleEvent&gt; ListOfTupleEvents</Member>
+        <Member type="Constructor">public EventData()</Member>
+        <Member type="Method">public List&lt;SingleEvent&gt; ReturnEvents()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Repbulic</Name>
+        <Access>Public</Access>
+        <Location left="206" top="396" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public int church = 40</Member>
+        <Member type="Field">public int population = 70</Member>
+        <Member type="Field">public int treasure = 30</Member>
+        <Member type="Field">public int army = 45</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SingleEvent</Name>
+        <Access>Public</Access>
+        <Location left="393" top="396" />
+        <Size width="536" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public string headline</Member>
+        <Member type="Field">public string info</Member>
+        <Member type="Field">public int c</Member>
+        <Member type="Field">public int p</Member>
+        <Member type="Field">public int t</Member>
+        <Member type="Field">public int a</Member>
+        <Member type="Field">public int cN</Member>
+        <Member type="Field">public int pN</Member>
+        <Member type="Field">public int tN</Member>
+        <Member type="Field">public int aN</Member>
+        <Member type="Constructor">public SingleEvent(string one, string two, int c2, int p2, int t2, int a2, int c2D, int p2D, int t2D, int a2D)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Program</Name>
+        <Access>Public</Access>
+        <Location left="412" top="20" />
+        <Size width="364" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">bool introState</Member>
+        <Member type="Method">static void Main(string[] args)</Member>
+        <Member type="Method">SingleEvet RandomEventType(List&lt;SingleEvent&gt; incomingList)</Member>
+        <Modifier>Static</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Generalization" first="4" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="1" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="6" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="6" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="6" second="5">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="6" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
