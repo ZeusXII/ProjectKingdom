@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 namespace ProjectKingdoM
 {
     class Program
     {
         static void Main(string[] args)
         {
-            EventData e = new EventData();
+            EventData e = new EventData(); //
             List<SingleEvent> incomingEventData = e.ReturnEvents(); //Imports data from EventData
             BaseEmpire B = new BaseEmpire(); //Base empire type class  
             
@@ -43,10 +40,17 @@ namespace ProjectKingdoM
                 if (B.church <= 0 || B.population <= 0 || B.treasure <= 0 || B.army <= 0)
                 {
                     Console.Clear();
-                    Console.WriteLine("WatCH Out YoUR KinGdoM IS iN RuInS!!!!!!!!!!!!!!");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("WatCH Out YoUR KinGdoM IS iN RuInS!!!!!!!!!!!!!! Press ENTER to restart");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.ReadKey();
+                    introState = true;
+                    continue;
+                    
                 }
-                if (!E.isRunning)
+                if(!E.isRunning)// Not working 
                 {
+                    /*
                     Console.Clear();
                     Console.WriteLine("If you want to quit, press q");
                     string userInput2;
@@ -55,6 +59,7 @@ namespace ProjectKingdoM
                     {
                         break;
                     }
+                    */
                 }
 
                 Console.WriteLine("==============================");

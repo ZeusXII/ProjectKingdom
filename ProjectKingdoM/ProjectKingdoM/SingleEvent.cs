@@ -4,9 +4,8 @@ using System.Text;
 
 namespace ProjectKingdoM
 {
-    class SingleEvent
-    {
-        //Class used for cleaning the program code up a bit by calling on it as a constructor instead of "Tuple<string, string, int, int, int, int>"
+    class SingleEvent // Keeps track of information of one single event
+    {      
         public string headline;
         public string info;
         public int c;
@@ -18,7 +17,7 @@ namespace ProjectKingdoM
         public int pN;
         public int tN;
         public int aN;
-        public SingleEvent(string one, string two, int c2, int p2, int t2, int a2, int c2D, int p2D, int t2D, int a2D)
+        public SingleEvent(string one, string two, int c2, int p2, int t2, int a2, int c2D, int p2D, int t2D, int a2D)// Tuple like constructor
         {
             headline = one;
             info = two;

@@ -4,42 +4,40 @@ using System.Text;
 
 namespace ProjectKingdoM
 {
-    class Event
+    class Event // Event logics
     {
-        //Might be uneccesary anävnds fö att skriva ut eventext i cwd
         protected string eventName;
         protected string eventInfo;
-        public BaseEmpire newBaseEmpireState;
+        public BaseEmpire newBaseEmpireState; // Placerholder for any empire object
         public bool isRunning;
 
-        //Constructor for 
-        public Event(SingleEvent singleEvent, BaseEmpire empirE)
+        public Event(SingleEvent singleEvent, BaseEmpire empirE) //Needs the event data and base emprie object as input 
         {
             isRunning = true;
             eventName = singleEvent.headline;
             eventInfo = singleEvent.info;
             modifyState(singleEvent, empirE);
-
-
         }
         public void modifyState(SingleEvent singleEvent, BaseEmpire empirE)
         { // Method used for maniplating the state of the empire starting parameters, each choice imapcts the parameters differently
-            Console.Write(eventName + "\n" + eventInfo + "\n\n0. Die (exits to main menu) 1. Act " + "2. Dont act" + " \nUser choice: ");
-            int menu; //dummy var
+            Console.Write(eventName + "\n" + eventInfo + "\n\n1. Act " + "2. Dont act" + " \nUser choice: ");
+            int menuState;
+
             try
             {
                 int userInput = int.Parse(Console.ReadLine());
-                menu = userInput;
+                menuState = userInput;
+        
             }
             catch (FormatException)
             {
-                Console.WriteLine("Only keys 1 2 3 and 0 are accepted!");
+                Console.Clear();
+                Console.WriteLine("Only keys 1, 2 and 0 are accepted! Press ENTER to continue.");
                 Console.ReadKey();
-                menu = 0;
+                menuState = 0;
             }
 
-
-            switch (menu)
+            switch (menuState)
             {
 
                 case 0:
@@ -59,12 +57,16 @@ namespace ProjectKingdoM
 
                     break;
                 default:
-                    Console.WriteLine("Ooga booga");
+                    
+                    Console.WriteLine("Only keys 1 and 2 are accepted! Press ENTER to retry!");
+                    Console.ReadKey();
+
                     break;
             }
             newBaseEmpireState = empirE;
         }
-        public BaseEmpire Act() //Methodused to return the new parameters after the player has choosen an action
+
+        public BaseEmpire Act() //Method used to return the new parameters after the player has choosen an action
         {
             return newBaseEmpireState;
         }
