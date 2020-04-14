@@ -19,7 +19,7 @@ namespace ProjectKingdoM
             modifyState(singleEvent, empirE);
         }
         public void modifyState(SingleEvent singleEvent, BaseEmpire empirE)
-        { // Method used for maniplating the state of the empire starting parameters, each choice imapcts the parameters differently
+        { // Method used for manipulating the state of the empire starting parameters, each choice impacts the parameters differently
             Console.Write(eventName + "\n" + eventInfo + "\n\n1. Act " + "2. Dont act" + " \nUser choice: ");
             int menuState;
 

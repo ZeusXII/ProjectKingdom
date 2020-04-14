@@ -41,7 +41,7 @@ namespace ProjectKingdoM
                 {
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("WatCH Out YoUR KinGdoM IS iN RuInS!!!!!!!!!!!!!! Press ENTER to restart");
+                    Console.WriteLine("Watch out your kingdom is in RUINS!!!!!!!!!!!!!! Press ENTER to restart");
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.ReadKey();
                     introState = true;
@@ -82,15 +82,17 @@ namespace ProjectKingdoM
         static BaseEmpire gameIntro(BaseEmpire B) //Contains 
         {
             Console.Clear();
-            Console.WriteLine("Welcome to project kingdom!\n###Instructions###\nIn project kingdom you will play as a ruler of an empire. You will be faced with different events, you can either choose to act on the event or refuse to act. Keep in mind that your action will have consequences on your empires status. Press ENTER to continue the tutorial");
+            Console.WriteLine("Welcome to project kingdom!\n###Instructions###\nIn project kingdom you will play as a leader of an empire. You will be faced with different events, you can either choose to act on the event or refuse to act. Keep in mind that your action will have consequences on your empire's status. Press ENTER to continue the tutorial");
             Console.ReadKey();
-            Console.WriteLine("Your empire has 4 parameters");
+            Console.WriteLine("Your empire has 4 parameters, church, population, treasury and army. Your actions will either increase or decrease the value of each paramter, if one value goes below 0 your empire will fail. Good luck! \n###End of instructions###\n Press ENTER to continue");
+            Console.ReadKey();
+            Console.Clear();
             Console.WriteLine("Choose empire type\n0.Exit program\n1. Kingdom \n2. Republic");
             int userInput = int.Parse(Console.ReadLine());
             int menu = userInput;
 
 
-            switch (menu) //Let's the user choose either a kingdom start or republic start, only chnge in starting values
+            switch (menu) //Let's the user choose either a kingdom start or republic start, only change is in starting values
             {
                 case 0:
                     Console.Clear();
