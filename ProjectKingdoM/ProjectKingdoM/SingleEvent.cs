@@ -6,7 +6,7 @@ namespace ProjectKingdoM
 {
     class SingleEvent // Keeps track of information of one single event
     {      
-        public string headline;
+        public string headline; //Feedback: skapa tydligare variabelnamn!!
         public string info;
         public int c;
         public int p;

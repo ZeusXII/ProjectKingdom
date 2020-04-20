@@ -37,7 +37,7 @@ namespace ProjectKingdoM
                 SingleEvent testRandom = RandomEventType(e.ReturnEvents()); //One random event    
                 Event E = new Event(testRandom, B);
                 B = E.Act();
-                if (B.church <= 0 || B.population <= 0 || B.treasure <= 0 || B.army <= 0)
+                if (B.church <= 0 || B.population <= 0 || B.treasure <= 0 || B.army <= 0) // Logic for empire parameters check
                 {
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -48,7 +48,7 @@ namespace ProjectKingdoM
                     continue;
                     
                 }
-                if(!E.isRunning)// Not working 
+                if(!E.isRunning)// Not working as intended, therefore it's not currently used
                 {
                     /*
                     Console.Clear();
