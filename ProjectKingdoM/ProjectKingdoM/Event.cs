@@ -44,16 +44,16 @@ namespace ProjectKingdoM
                     isRunning = false;
                     break;
                 case 1:
-                    empirE.church += singleEvent.c;
-                    empirE.army += singleEvent.a;
-                    empirE.treasure += singleEvent.t;
-                    empirE.population += singleEvent.p;
+                    empirE.church += singleEvent.churchActVariable;
+                    empirE.army += singleEvent.armyActVariable;
+                    empirE.treasure += singleEvent.treasureActVariable;
+                    empirE.population += singleEvent.populationActVariable;
                     break;
                 case 2:
-                    empirE.church += singleEvent.cN;
-                    empirE.army += singleEvent.aN;
-                    empirE.treasure += singleEvent.tN;
-                    empirE.population += singleEvent.pN;
+                    empirE.church += singleEvent.churchDontActVariable;
+                    empirE.army += singleEvent.armyDontActVariable;
+                    empirE.treasure += singleEvent.treasureDontActVariable;
+                    empirE.population += singleEvent.populationDontActVariable;
 
                     break;
                 default:
