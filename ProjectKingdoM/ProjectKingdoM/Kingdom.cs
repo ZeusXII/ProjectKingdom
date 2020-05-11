@@ -6,7 +6,7 @@ namespace ProjectKingdoM
 {
     class Kingdom : BaseEmpire
     {      
-        public Kingdom() // Constructor, sets starting value of kingdom parameters
+        public Kingdom() // Constructor, sets starting value of empir type "kingdom! parameters
         {
             church = 80;
             population = 40;

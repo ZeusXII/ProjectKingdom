@@ -3,11 +3,12 @@ using System.Collections.Generic;
 
 namespace ProjectKingdoM
 {
-    class EventData // Contains all event info
+    class EventData // Classcontains all information and value changes for speccific events 
     {
-        List<SingleEvent> ListOfEvents = new List<SingleEvent>(); //List of all events
+        List<SingleEvent> ListOfEvents = new List<SingleEvent>(); //List containing ALL events possible in the game. 
 
-        public EventData()// Constructing all event info/data 
+        public EventData()//If one wants a new event they will write one in the constructor. 
+            //SingleEvent/Tuple strructure is string, string, int (actChurchValue), int(actPopulationValue), int(actTreasureActValue) int(, int, int, int, int
         {
             ListOfEvents.Add(new SingleEvent(
                 "Trade guild",

@@ -13,7 +13,7 @@ namespace ProjectKingdoM
 
         public Event(SingleEvent singleEvent, BaseEmpire empirE) //Needs the event data and base emprie object as input 
         {
-            isRunning = true;
+            isRunning = true; 
             eventName = singleEvent.headline;
             eventInfo = singleEvent.info;
             modifyState(singleEvent, empirE);
@@ -29,7 +29,7 @@ namespace ProjectKingdoM
                 menuState = userInput;
         
             }
-            catch (FormatException)
+            catch (FormatException) // Part of error correcting if user types in an invalid letter/number
             {
                 Console.Clear();
                 Console.WriteLine("Only keys 1, 2 and 0 are accepted! Press ENTER to continue.");
@@ -43,13 +43,13 @@ namespace ProjectKingdoM
                 case 0:
                     isRunning = false;
                     break;
-                case 1:
+                case 1: //Applies predefined act values (which are located in EvenData.cs/ListOfEvents)
                     empirE.church += singleEvent.churchActVariable;
                     empirE.army += singleEvent.armyActVariable;
                     empirE.treasure += singleEvent.treasureActVariable;
                     empirE.population += singleEvent.populationActVariable;
                     break;
-                case 2:
+                case 2: //Applies predefined don't act values (which are located in EvenData.cs/ListOfEvent)
                     empirE.church += singleEvent.churchDontActVariable;
                     empirE.army += singleEvent.armyDontActVariable;
                     empirE.treasure += singleEvent.treasureDontActVariable;
@@ -58,7 +58,7 @@ namespace ProjectKingdoM
                     break;
                 default:
                     
-                    Console.WriteLine("Only keys 1 and 2 are accepted! Press ENTER to retry!");
+                    Console.WriteLine("Only keys 1 and 2 are accepted! Press ENTER to retry!"); //Error correction of invalid user input
                     Console.ReadKey();
 
                     break;

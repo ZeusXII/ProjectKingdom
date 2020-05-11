@@ -4,18 +4,18 @@ using System.Text;
 
 namespace ProjectKingdoM
 {
-    class GameHandler
+    class GameHandler // Class containing much of the logic that was present in main before. 
     {
-        EventData eventD;
+        EventData eventD; 
         BaseEmpire bEmpire;
-        public GameHandler(EventData e, BaseEmpire b)
+        public GameHandler(EventData e, BaseEmpire b) //Constryctor used to create necesary objects to be able for GameHandler to be created as a new object in main.
         {
             eventD = e;
             bEmpire = b;
         }
         public void MainLoop()
         {
-            List<SingleEvent> incomingEventData = eventD.ReturnEvents(); //Imports data from EventData
+            List<SingleEvent> incomingEventData = eventD.ReturnEvents(); //Imports data from EventData to be used by Event.cs to then be able to return the new empire state.
             bool introState = true;
             while (true)
             {
@@ -23,7 +23,7 @@ namespace ProjectKingdoM
                 {
                     try
                     {
-                        bEmpire = gameIntro(bEmpire);
+                        bEmpire = gameIntro(bEmpire); //Start a new empire with the gameIntro method 
                         introState = false;
                     }
                     catch (FormatException)
@@ -37,12 +37,12 @@ namespace ProjectKingdoM
 
                 Console.Clear();
                 Console.WriteLine("Current status");
-                bEmpire.PresentParameters();
+                bEmpire.PresentParameters(); 
                 Console.WriteLine("===============Event===============");
-                SingleEvent testRandom = RandomEventType(eventD.ReturnEvents()); //One random event    
+                SingleEvent testRandom = RandomEventType(eventD.ReturnEvents()); //Takes one random event to be presented and randomly generated from the random generator.
                 Event E = new Event(testRandom, bEmpire);
                 bEmpire = E.Act();
-                if (bEmpire.church <= 0 || bEmpire.population <= 0 || bEmpire.treasure <= 0 || bEmpire.army <= 0) // Logic for empire parameters check
+                if (bEmpire.church <= 0 || bEmpire.population <= 0 || bEmpire.treasure <= 0 || bEmpire.army <= 0) // Logic responsible for ending the empire if any of the empire values drop below zero. Kicks the player back to the beginning of the program.
                 {
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -52,7 +52,7 @@ namespace ProjectKingdoM
                     introState = true;
                     continue;
                 }
-                if (!E.isRunning)// Not working as intended, therefore it's not currently used
+                if (!E.isRunning)// Part of error correcting user input. Not working as intended, therefore it's not currently used
                 {
                     /*
                     Console.Clear();
@@ -74,11 +74,11 @@ namespace ProjectKingdoM
         }
         public SingleEvent RandomEventType(List<SingleEvent> incomingList)
         {   //Generates a random order of possible pre-defined events 
-            Random generator = new Random(); //Random generator used for the method below
+            Random generator = new Random(); //Random generator used to present events in random order
             int eventTypeIndex = generator.Next(0, incomingList.Count);
             return incomingList[eventTypeIndex];
         }
-        public BaseEmpire gameIntro(BaseEmpire bEmpire) //Contains 
+        public BaseEmpire gameIntro(BaseEmpire bEmpire) //Contains the basic tutorial presented in the beginning of the program
         {
             Console.Clear();
             Console.WriteLine("Welcome to project kingdom!\n###Instructions###\nIn project kingdom you will play as a leader of an empire. You will be faced with different events, you can either choose to act on the event or refuse to act. Keep in mind that your action will have consequences on your empire's status. Press ENTER to continue the tutorial");
@@ -111,7 +111,7 @@ namespace ProjectKingdoM
                     System.Environment.Exit(0);
                     break;
             }
-            return bEmpire;
+            return bEmpire; //return chosoen baseEmpire type
         }
     }
 }
